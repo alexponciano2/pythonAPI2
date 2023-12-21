@@ -26,9 +26,9 @@ def get_monsters():
     except ValueError:
         return jsonify({'error': 'Os níveis dos jogadores devem ser números inteiros.'}), 400
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
-
-
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    app.run(debug=True)
+
+
+# if __name__ == '__main__':
+#     app.run(host='0.0.0.0', port=8080)
