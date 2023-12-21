@@ -19,16 +19,16 @@ def get_monsters():
         y = player_b_level + 9
 
         # Filtrando a lista de monstros com base nos limites calculados
-        filtered_mobs = [mob for mob in mobs_data['monsters'] if x <= mob['level'] <= y]
+        filtered_mobs = [mob for mob in mobs_data['monsters'] if x <= mob['Level'] <= y]
 
         return jsonify({'monsters': filtered_mobs})
 
     except ValueError:
         return jsonify({'error': 'Os níveis dos jogadores devem ser números inteiros.'}), 400
 
-if __name__ == '__main__':
-    app.run(debug=True)
-
-
 # if __name__ == '__main__':
-#     app.run(host='0.0.0.0', port=8080)
+#     app.run(debug=True)
+
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8080)
