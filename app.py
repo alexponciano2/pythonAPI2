@@ -167,7 +167,7 @@ def get_monsters():
         y = player_b_level + 9
 
         # Filtrando a lista de monstros com base nos limites calculados
-        filtered_mobs = [mob for mob in monsters_data['monsters'] if x <= mob['Level'] <= y]
+        filtered_mobs = [{'name': mob['Name'], 'area': mob['Area'], 'level': mob['Level']} for mob in monsters_data['monsters'] if x <= mob['Level'] <= y]
 
         return jsonify({'monsters': filtered_mobs})
 
